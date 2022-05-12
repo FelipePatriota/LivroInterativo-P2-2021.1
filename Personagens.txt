@@ -1,0 +1,8 @@
+Protagonista
+Luna
+20
+
+Antagonista
+Alfa
+200
+

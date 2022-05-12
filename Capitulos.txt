@@ -1,0 +1,114 @@
+CAPITULO
+ID
+Raiz
+PERSONAGENS	
+Protagonista
+Antagonista
+TEXTO
+Você acorda abre os olhos e se vê uma escuridão total,
+nenhuma lembrança de como chegou ali, tudo parece estar enevoado em sua cabeça.
+você começa a andar e alguns metros adiante você vê uma luminosidade,
+aquilo te enche de esperança de ser uma possível saída daquele lugar,
+mas tudo foi em vão é apenas um baú expelindo algum tipo de luminosidade,
+tenta abrir mais nada acontece, você se senta próximo a ele triste e pensativo,
+perguntas começam a emergir em sua cabeça, como eu cheguei até aqui? onde está minha família?,
+eu tenho mesmo família? QUAL É O MEU NOME??
+VARIACOES
+0
+0
+
+CAPITULO_COM_IMAGEM
+ID
+Cap2
+PERSONAGENS	
+Protagonista
+Antagonista
+TEXTO
+Um sussurro ecoa vindo do além, ele percorre seu corpo arrepiando toda a sua espinha,
+é isso mesmo, meu nome é 
+Protagonista
+por um breve momento de clareza você lembra do seu nome,
+do seu lado você vê que o baú está diferente, de alguma forma ele se abriu, abrir?
+VARIACOES
+-10
+0
+IMAGEM
+                       -|             |-
+         -|                  [-_-_-_-_-_-_-_-]                  |-
+         [-_-_-_-_-]          |             |          [-_-_-_-_-]
+          | o   o |           [  0   0   0  ]           | o   o |
+           |     |    -|       |           |       |-    |     |
+           |     |_-___-___-___-|         |-___-___-___-_|     |
+           |  o  ]              [    0    ]              [  o  |
+           |     ]   o   o   o  [ _______ ]  o   o   o   [     | ----__________
+_____----- |     ]              [ ||||||| ]              [     |
+           |     ]              [ ||||||| ]              [     |
+       _-_-|_____]--------------[_|||||||_]--------------[_____|-_-_
+      ( (__________------------_____________-------------_________) )
+IMAGEM_FIM
+
+CAPITULO
+ID
+CapFinal
+PERSONAGENS	
+Protagonista
+Antagonista
+TEXTO
+Você decidiu não processeguir em abrir o baú,
+dias se passaram e você continuou vangando e vagando perdido com fome e sede,
+até que sua jornada chegou ao fim
+VARIACOES
+-10
+0
+
+ESCOLHA
+DE
+Raiz
+PARA
+Cap2
+TEXTO DIGITADO
+Andar
+TEXTO MOSTRADO
+Continua a [Andar]
+
+ESCOLHA
+DE
+Raiz
+PARA
+Cap2
+TEXTO DIGITADO
+continuar
+TEXTO MOSTRADO
+Ela deseja [Continuar]
+
+ESCOLHA
+DE
+Cap2
+PARA
+CapFinal
+TEXTO DIGITADO
+nao
+TEXTO MOSTRADO
+[Não] Abrir
+
+ESCOLHA
+DE
+Cap2
+PARA
+CapFinal
+TEXTO DIGITADO
+abrir
+TEXTO MOSTRADO
+Ela deseja [abrir]
+
+ESCOLHA
+DE
+Cap2
+PARA
+Raiz
+TEXTO DIGITADO
+volta
+TEXTO MOSTRADO
+[Volta] para o começo
+
+
