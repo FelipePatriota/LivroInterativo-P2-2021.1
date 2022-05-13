@@ -9,8 +9,9 @@ public class Rpgcopia {
     public static void main(String[] args) throws Exception {
         Scanner escaneadorDoConsole = new Scanner(System.in, "UTF-8");
         LeitorDeDados leitor = new LeitorDeDados();
-
+        // Carrega os personagens
         Map<String, Personagem> personagens = leitor.carregarPersonagens("Personagens.txt");
+        // Carrega os capitulos
         Map<String, Capitulo> capitulos = leitor.carregarCapitulos("Capitulos.txt", personagens, escaneadorDoConsole);
 
         Capitulo raiz = capitulos.get("Raiz");

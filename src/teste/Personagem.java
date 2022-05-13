@@ -7,7 +7,7 @@ public class Personagem {
   private int energia;
 
 
-
+  //construtor Personagem
   public Personagem(String nome, int energia){
 
     this.nome = nome;
@@ -16,7 +16,7 @@ public class Personagem {
 
   }
 
-  
+  // Metodo que ajusta a energia do personagem
   public void ajustarEnergia(int variacao){
     if(variacao !=0){
       setEnergia(this.energia + variacao);
@@ -25,6 +25,7 @@ public class Personagem {
     }
   }
 
+  // set e get da energia
   public void setEnergia(int energia){
     this.energia = energia;
     if(energia <= 0){
@@ -36,7 +37,7 @@ public class Personagem {
   public int getEnergia(){
     return this.energia;
   }
-
+  //get do nome
   public String getNome(){
     return this.nome;
   }

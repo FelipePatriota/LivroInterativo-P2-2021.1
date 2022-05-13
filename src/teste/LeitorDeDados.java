@@ -7,6 +7,8 @@ import java.util.Map;
 import java.util.Scanner;
 
 public class LeitorDeDados {
+
+  //Método que carrega os personagens recebe como parametro o nome do arquivo e retorna um mapa de personagens
   public HashMap<String, Personagem> carregarPersonagens(String caminho) {
     HashMap<String, Personagem> personagens = new HashMap<String, Personagem>();
 
@@ -37,7 +39,7 @@ public class LeitorDeDados {
     return personagens;
 
   }
-
+  //Método que carrega os capitulos recebendo o caminho do arquivo e o mapa de personagens e retorna um arraylist de capitulos
   public HashMap<String, Capitulo> carregarCapitulos(String caminho, Map<String, Personagem> personagens,
       Scanner escaneadorDoConsole) {
 
@@ -81,7 +83,7 @@ public class LeitorDeDados {
     return capitulos;
 
   }
-
+  //Método que lê as escolhas do arquivo e retorna um arraylist de escolhas
   private void LerEscolha(HashMap<String, Capitulo> capitulos, Scanner escaneadorDeArquivo) {
 
     escaneadorDeArquivo.nextLine(); // DE

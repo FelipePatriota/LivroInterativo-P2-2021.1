@@ -24,7 +24,7 @@ public class Capitulo {
 
     
   }
- 
+  //contrutor de capitulo
   public Capitulo(Map<String, Personagem> personagens, Scanner escaneadorDoConsole, Scanner escaneadorDeArquivo){
     this.LerCapitulo(personagens, escaneadorDeArquivo);
     this.escaneador = escaneadorDoConsole;
@@ -32,11 +32,13 @@ public class Capitulo {
     
   }
 
+  // contrutor para capitulo 
   public Capitulo(){
     this.texto = "";
     this.escolhas = new ArrayList<Escolha>();
   }
- 
+  // Método leitor de capitulos recebe um mapa de personagens e um scanner de arquivo, 
+  // e retorna um capitulo juntamento com o personagem que o capitulo referencia
   protected void LerCapitulo(Map<String, Personagem> personagens, Scanner escaneadorDeArquivo) {
 
     escaneadorDeArquivo.nextLine();// Personagem
@@ -64,12 +66,12 @@ public class Capitulo {
     this.variacaoEnergiaPersonagem1 = Integer.parseInt(escaneadorDeArquivo.nextLine());
     this.variacaoEnergiaPersonagem2 = Integer.parseInt(escaneadorDeArquivo.nextLine());//Energia
   }
-
+  // Método que recebe e adiciona uma escolha ao capitulo 
   public void adcionarEscolha(Escolha escolha){
     escolhas.add(escolha);
     
   }
-
+  // Metodo que faz o procedimento de iniciar a execução do programa 
   public void executar(){
 
     mostrar();
@@ -82,7 +84,7 @@ public class Capitulo {
       System.out.println("Sua aventura acabou");
     }
   }
-
+  // Método que mostra as escolhas do capitulo e faz a mudança de energia do personagem
   protected void mostrar(){
     System.out.println(texto);
     personagem1.ajustarEnergia(variacaoEnergiaPersonagem1);
@@ -100,6 +102,8 @@ public class Capitulo {
       System.out.println();
     }
 
+
+  // Método que escolhe uma escolha do capitulo e diz se é uma escolha válida ou não
   public int escolher(){
 
 
