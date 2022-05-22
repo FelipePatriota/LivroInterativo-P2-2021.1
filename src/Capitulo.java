@@ -1,4 +1,4 @@
-package teste;
+
 
 import java.util.ArrayList;
 import java.util.Map;
@@ -25,9 +25,8 @@ public class Capitulo {
     
   }
   //contrutor de capitulo
-  public Capitulo(Map<String, Personagem> personagens, Scanner escaneadorDoConsole, Scanner escaneadorDeArquivo){
-    this.LerCapitulo(personagens, escaneadorDeArquivo);
-    this.escaneador = escaneadorDoConsole;
+  public Capitulo(Map<String, Personagem> personagens, Scanner escaneadorDeArquivo){
+    this.lerCapitulo(personagens, escaneadorDeArquivo);
     this.escolhas = new ArrayList<Escolha>();
     
   }
@@ -39,35 +38,36 @@ public class Capitulo {
   }
   // Método leitor de capitulos recebe um mapa de personagens e um scanner de arquivo, 
   // e retorna um capitulo juntamento com o personagem que o capitulo referencia
-  protected void LerCapitulo(Map<String, Personagem> personagens, Scanner escaneadorDeArquivo) {
+  protected void lerCapitulo(
+    Map<String, Personagem> personagens,
+    Scanner escaneadorDoArquivo) {
 
-    escaneadorDeArquivo.nextLine();// Personagem
-    String idPersonagem1 = escaneadorDeArquivo.nextLine(); //ID do personagem
-    String idPersonagem2 = escaneadorDeArquivo.nextLine(); //ID do personagem
-    this.personagem1 = personagens.get(idPersonagem1);
-    this.personagem2 = personagens.get(idPersonagem2);
+escaneadorDoArquivo.nextLine(); // PERSONAGEM
+String idPersonagem1 = escaneadorDoArquivo.nextLine().toLowerCase();
+String idPersonagem2 = escaneadorDoArquivo.nextLine().toLowerCase();
+this.personagem1 = personagens.get(idPersonagem1);
+this.personagem2 = personagens.get(idPersonagem2);
 
-    escaneadorDeArquivo.nextLine(); //Texto
-    String linha = escaneadorDeArquivo.nextLine();
-    while(!linha.equals("VARIACOES")){
-      
-      if(linha.equals(idPersonagem1)){
+escaneadorDoArquivo.nextLine(); // TEXTO
+String linha = escaneadorDoArquivo.nextLine();
+this.texto = "";
+while (!linha.equals("VARIACOES")) {
+    if (linha.toLowerCase().equals(idPersonagem1)) {
         texto = texto + personagem1.getNome();
-      }
-      else if (linha.equals(idPersonagem2)){
+    } else if (linha.toLowerCase().equals(idPersonagem2)) {
         texto = texto + personagem2.getNome();
-      }
-      else{
+    } else {
         texto = texto + linha;
-      }
-      linha = escaneadorDeArquivo.nextLine();
-      
     }
-    this.variacaoEnergiaPersonagem1 = Integer.parseInt(escaneadorDeArquivo.nextLine());
-    this.variacaoEnergiaPersonagem2 = Integer.parseInt(escaneadorDeArquivo.nextLine());//Energia
-  }
+    linha = escaneadorDoArquivo.nextLine();
+}
+
+// VARIAÇÕES já foi lido
+this.variacaoEnergiaPersonagem1 = Integer.parseInt(escaneadorDoArquivo.nextLine());
+this.variacaoEnergiaPersonagem2 = Integer.parseInt(escaneadorDoArquivo.nextLine());
+}
   // Método que recebe e adiciona uma escolha ao capitulo 
-  public void adcionarEscolha(Escolha escolha){
+  public void adicionarEscolha(Escolha escolha){
     escolhas.add(escolha);
     
   }
@@ -130,7 +130,14 @@ public class Capitulo {
   }
 
     return opcaoEscolhida;
-  }                 
+
+  }
+public String getTexto() {
+    return this.texto;
+}
+public ArrayList<Escolha> getEscolhas() {
+    return escolhas;
+}                 
   
 
 

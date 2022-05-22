@@ -1,4 +1,4 @@
-package teste;
+
 
 public class Escolha {
   private String textoDigitado;
@@ -13,6 +13,7 @@ public class Escolha {
     this.textoMostrado = textoMostrado;
     this.proximo = proximo;
   }    
+
   //get do texto digitado
   public String getTextoDigitado() {
     return textoDigitado;
