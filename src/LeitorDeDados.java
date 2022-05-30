@@ -1,5 +1,3 @@
-
-
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.HashMap;
@@ -8,7 +6,13 @@ import java.util.Scanner;
 
 public class LeitorDeDados {
 
-  //Método que carrega os personagens recebe como parametro o nome do arquivo e retorna um mapa de personagens
+
+  /**
+   * Método que carrega os personagens recebe como parametro o nome do arquivo e
+   * retorna um mapa de personagens
+   * @param caminho
+   * @return
+   */
   public HashMap<String, Personagem> carregarPersonagens(String caminho) {
     HashMap<String, Personagem> personagens = new HashMap<String, Personagem>();
 
@@ -37,7 +41,14 @@ public class LeitorDeDados {
     return personagens;
   }
   
-  //Método que carrega os capitulos recebendo o caminho do arquivo e o mapa de personagens e retorna um arraylist de capitulos
+
+  /**
+   * Método que carrega os capitulos recebe como parametro o nome do arquivo e retorna 
+   * um arraylist de capitulos
+   * @param caminho
+   * @param personagens
+   * @return
+   */
   public HashMap<String, Capitulo> carregarCapitulos(
     String caminho,
     Map<String, Personagem> personagens) {
@@ -82,7 +93,12 @@ public class LeitorDeDados {
 
     return capitulos;
     }
-    //Método que lê as escolhas do arquivo e retorna um arraylist de escolhas
+
+    /**
+     * Método que lê as escolhas do arquivo e retorna um arraylist de escolhas
+     * @param capitulos
+     * @param escaneadorDeArquivo
+     */
     private void lerEscolha(
         HashMap<String, Capitulo> capitulos,
         Scanner escaneadorDeArquivo) {

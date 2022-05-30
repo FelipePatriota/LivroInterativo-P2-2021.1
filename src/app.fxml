@@ -42,36 +42,48 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="421.0" prefWidth="715.0" style="-fx-background-color: transparent;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" 
+prefHeight="421.0" prefWidth="715.0" style="-fx-background-color: transparent;" 
+xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller">
    <children>
-      <AnchorPane blendMode="OVERLAY" layoutX="325.0" layoutY="26.0" prefHeight="321.0" prefWidth="287.0" style="-fx-background-radius: 25; -fx-background-color: white;" styleClass="colorBackground">
+      <AnchorPane blendMode="OVERLAY" layoutX="325.0" layoutY="26.0" prefHeight="321.0" 
+      prefWidth="287.0" style="-fx-background-radius: 25; -fx-background-color: white;" 
+      styleClass="colorBackground">
          <children>
-            <ButtonBar fx:id="botoesEscolha1" layoutX="3.0" layoutY="137.0" prefHeight="173.0" prefWidth="227.0" />
-            <Label layoutX="37.0" layoutY="14.0" prefHeight="36.0" prefWidth="227.0" text="A história da floresta">
+            <ButtonBar fx:id="botoesEscolha1" layoutX="3.0" layoutY="137.0" prefHeight="173.0" 
+            prefWidth="227.0" />
+            <Label layoutX="37.0" layoutY="14.0" prefHeight="36.0" prefWidth="227.0" 
+            text="A história da floresta">
                <font>
                   <Font name="Candara" size="25.0" />
                </font>
             </Label>
          </children>
       </AnchorPane>
-      <AnchorPane layoutX="235.0" layoutY="82.0" prefHeight="286.0" prefWidth="437.0" style="-fx-background-color: grey;">
+      <AnchorPane layoutX="235.0" layoutY="82.0" prefHeight="286.0" prefWidth="437.0" 
+      style="-fx-background-color: grey;">
          <children>
-            <TextArea fx:id="textoCapitulo" editable="false" layoutX="40.0" layoutY="8.0" prefHeight="270.0" prefWidth="389.0" text="..." wrapText="true">
+            <TextArea fx:id="textoCapitulo" editable="false" layoutX="40.0" layoutY="8.0"
+             prefHeight="270.0" prefWidth="389.0" text="..." wrapText="true">
                <font>
                   <Font name="Candara Light" size="18.0" />
                </font>
             </TextArea>
-            <Button fx:id="botaoIniciar" layoutX="201.0" layoutY="134.0" mnemonicParsing="false" onAction="#iniciarHistoria" text="Carregar">
+            <Button fx:id="botaoIniciar" layoutX="201.0" layoutY="134.0" mnemonicParsing="false" 
+            onAction="#iniciarHistoria" text="Carregar">
                <font>
                   <Font name="Candara" size="14.0" />
                </font>
             </Button>
          </children>
       </AnchorPane>
-      <AnchorPane blendMode="OVERLAY" layoutX="5.0" layoutY="68.0" prefHeight="313.0" prefWidth="264.0" style="-fx-background-radius: 25;" styleClass="colorBackground">
+      <AnchorPane blendMode="OVERLAY" layoutX="5.0" layoutY="68.0" prefHeight="313.0" 
+      prefWidth="264.0" style="-fx-background-radius: 25;" styleClass="colorBackground">
          <children>
-            <ButtonBar fx:id="botoesEscolha" layoutX="-8.0" layoutY="170.0" prefHeight="137.0" prefWidth="227.0" />
-            <ImageView fx:id="imagemQuadro" fitHeight="143.0" fitWidth="254.0" layoutX="5.0" layoutY="24.0" pickOnBounds="true" preserveRatio="true">
+            <ButtonBar fx:id="botoesEscolha" layoutX="-8.0" layoutY="170.0" prefHeight="137.0" 
+            prefWidth="227.0" />
+            <ImageView fx:id="imagemQuadro" fitHeight="143.0" fitWidth="254.0" layoutX="5.0" 
+            layoutY="24.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../Assets/caverna.png" />
                </image>

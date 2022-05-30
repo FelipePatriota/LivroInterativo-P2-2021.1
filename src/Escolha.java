@@ -7,22 +7,40 @@ public class Escolha {
 
   
 
-  //construtor Escolha
+
+  /**
+   * Construtor da classe Escolha.
+   * @param textoDigitado
+   * @param textoMostrado
+   * @param proximo
+   */
   public Escolha(String textoDigitado, String textoMostrado, Capitulo proximo) {
     this.textoDigitado = textoDigitado;
     this.textoMostrado = textoMostrado;
     this.proximo = proximo;
   }    
 
-  //get do texto digitado
+
+  /**
+   * Método que retorna o texto digitado.
+   * @return
+   */
   public String getTextoDigitado() {
     return textoDigitado;
   }
-  //get do texto mostrado
+
+  /**
+   * Método que retorna o texto mostrado.
+   * @return
+   */
   public String getTextoMostrado() {
     return textoMostrado;
   }
-  //get do proximo
+  
+  /**
+   * Método que retorna o proximo capitulo.
+   * @return
+   */
   public Capitulo getProximo() {
     return proximo;
   }

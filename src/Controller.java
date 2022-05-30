@@ -1,3 +1,4 @@
+import java.io.File;
 import java.util.ArrayList;
 import java.util.Map;
 import javafx.fxml.FXML;
@@ -24,7 +25,9 @@ public class Controller {
 
     @FXML
     private TextArea textoCapitulo;
-
+    /** 
+     * Método que inicializa o controller após o arquivo fxml ter sido carregado
+     */
     @FXML
     void iniciarHistoria(ActionEvent event) 
     {
@@ -38,49 +41,52 @@ public class Controller {
         mostrarCapitulo(raiz);
         
         botaoIniciar.setVisible(false);
-        //raiz.executar();
+
     }
+    /**
+     * Método que mostra o capitulo atual
+     * @param capitulo
+     */
 
     private void mostrarCapitulo(Capitulo capitulo)
     {
         mostrarTextoCapitulo(capitulo.getTexto());
         mostrarEscolhas(capitulo.getEscolhas());
     }
-
+    /**
+     * Método que mostra o texto do capitulo
+     */
     public void mostrarTextoCapitulo(String texto) 
     {
         textoCapitulo.setText(texto);
     }
-
+    /**
+     * Método que mostra as escolhas do capitulo
+     */
     public void mostrarEscolhas(ArrayList<Escolha> escolhas)
     {
         botoesEscolha.setPadding(new Insets(10));
         botoesEscolha.getButtons().clear();
 
 
-
+        /** 
+         * Cria um evento para cada escolha
+         */
+         
         for (int i = 0; i < escolhas.size(); i++) {
 
             botaoEscolha botao = new botaoEscolha(escolhas.get(i));
-
-            
             botao.setOnAction(new EventHandler<ActionEvent>() 
             {
                 @Override
                 public void handle(ActionEvent event) {
                     mostrarCapitulo(botao.getEscolha().getProximo());
                     System.out.println("Assets/"+botao.getEscolha().getTextoDigitado()+".jpeg");
-                    //Image Imagem = new Image("Assets/"+botao.getEscolha().getTextoDigitado()+".jpeg");
 
-                    String idImagem = ""+botao.getEscolha().getTextoDigitado()+".png";
-                    Image imagem = new Image(this.getClass().getResourceAsStream(idImagem));
-
-                    imagemQuadro.setImage(imagem);
-
-
+                    String idImagem = "Assets/"+botao.getEscolha().getTextoDigitado()+".png";
                     
+                    imagemQuadro.setImage(new Image(new File(idImagem).toURI().toString()));
                     
-
                 }
                 
             });
